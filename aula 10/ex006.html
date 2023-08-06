@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 15;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> <!--chamando uma função-->
+        Interaja...
+    </div>
+    <script>
+        let a = document.getElementById('area')
+        //a.addEventListener('click',clicar)
+        //a.addEventListener('mouseenter', entrar);
+        //a.addEventListener('mouseout',sair);
+        //listeners p/ evitar poluir o html na tag <div>
+        function clicar(){
+            a.innerText = 'Clicou!'; //mudou o texto para 'Clicou quando clica dentro do quadrado'
+            a.style.background = 'red';
+        }
+        function entrar(){ //muda o texto para 'Entrou!' qnd mouse entra no quadrado
+            a.innerText = 'Entrou!'
+        }
+        function sair(){ //muda o texto para 'Saiu!' qnd mouse sai no quadrado
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>

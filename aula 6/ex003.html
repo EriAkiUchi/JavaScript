@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> <!-- parte HTML-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>/* parte CSS*/
+        body {
+            background-color: rgb(92, 92, 243);
+            color: white;
+            font: normal 25pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>Curse is gone</p>
+    <script>
+        var n1 = Number(prompt('Digite um número: '));//recebe uma STRING e parseInt transforma em NUMBER
+        var n2 = Number(prompt('Digite outro número: '));//recebe uma STRING e parseInt transforma em NUMBER
+        var s = n1 + n2; //adição; se fossem strings, iria concatenar
+        alert(`A soma de ${n1} + ${n2} é ${s}.`);
+        //number + number = adição
+        //string + string = concatenação
+
+        /*
+        Number.parseFloat() -> string p/ float
+        Number() -> string p/ number, int ou float
+
+        String() -> number p/ string
+        n.toString() -> number p/ string
+        
+        Dupla Crase permite TEMPLATE STRING: formatar a string de saída
+        */
+    </script>
+    
+</body>
+</html>

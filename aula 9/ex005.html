@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: #72b5fc;
+            color: #ffffff;
+            font: normal 18pt Arial
+        }
+    </style>
+</head>
+<body>
+    <h1> Iniciando estudos DOM</h1>
+    <p> Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong> DOM</strong> em Javascript</p>
+    <div id="msg"> Clique em mim</div> <!- atribuindo a tag com ID 'msg', pode mudar a tag em Name ou class também->
+    <script> 
+        let corpo = window.document.body
+        let p1 = window.document.getElementsByTagName('p')[0]
+        //pegando o 1º elemento <p> que é um parágrafo
+        // ('p')[0] indica que etá pegando o 1º <p>, já que tem 2 deles
+        window.document.write('Está escrito assim: ' + p1.innerHTML)
+        //windw.alert(p1.InnerText) mostra uma notifiçaão na tela usando a variável p1
+        //innerHTML pega todos as mundanças no elemento como <strong>
+        //innetText só pega o texto
+
+        /*
+        let d = window.document.getElementById('msg')
+        //selecionando a tag que tem como ID 'msg'
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        */
+        var d = document.querySelector('div#msg') //id => # class -> .
+        d.style.background = 'green'
+    </script>
+</body>
+</html>

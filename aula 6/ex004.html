@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            font: normal 20pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        var name = window.prompt('Qual é o seu nome?');
+        var numero = 1545.5;
+        document.write(`Olá <strong>${name}</strong>!. Seu nome tem ${name.length} letras.<br/>`); //document.write escreve no site
+        document.write(`Seu nome em maiúscolo é ${name.toUpperCase()}.<br/>`); //<br/> faz quebra de linha como \n
+        document.write(`Seu nome em minúscolo é ${name.toLowerCase()}. <br/>`);
+        document.write(`${numero.toFixed(2).replace('.' , ',')}<br/>`);//formatar nº de casas decimais e colocar virgula no lugar de ponto
+        document.write(`${numero.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br/>`); // relizar a localização da string, no caso é Brasil
+
+        /*
+        Formatar numbers: n.toFixed(2) -> mostra 2 casas decimais
+        n.toFixed(2).replace('.',',') -> substituindo o ponto do número float por uma vírgula
+        n.to LocaleString() -> localizar números p/ mostrar valor monetário por exemplo
+        */
+
+    </script>
+</body>
+</html>
